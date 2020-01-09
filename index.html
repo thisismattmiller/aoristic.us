@@ -1,0 +1,968 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="fragment" content="!">
+<title>AORISTIC</title>
+
+<link  href="http://fonts.googleapis.com/css?family=Arimo:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >
+
+<link type="text/css" href="css/smoothness/jquery-ui-1.8.9.custom.css" rel="Stylesheet" />	
+<script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+
+<script type="text/javascript" src="history/scripts/jquery.history.min.js"></script>
+
+
+<style type="text/css">
+
+	html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;}
+
+
+	body{
+		background-image:url(img/bkground.jpg);
+		background-position:center top;
+		background-attachment:fixed;
+		background-repeat:no-repeat;
+		
+	}
+	
+	#content{
+		width:985px;
+		min-width:985px;			
+		min-height:1000px;
+		/*border:solid 2px #0C0;*/
+		position:relative;
+		padding:5px;
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+		background:transparent;
+		/*-moz-box-shadow: 10px 10px 5px #888;
+		-webkit-box-shadow: 10px 10px 5px #888;
+		box-shadow: 10px 10px 5px #888;*/
+
+		
+	}
+	.logo{
+	  font-family: 'Arimo', serif;
+	  font-size: 114px;
+	  font-style: normal;
+	  font-weight: 700;
+	  text-shadow: 2px 2px 2px #aaa;
+	  text-decoration: none;
+	  text-transform: none;
+	  letter-spacing: 0.064em;
+	  word-spacing: -0.014em;
+	  position:absolute;
+	  cursor:pointer;
+	  top:15px;
+	  right:0px;
+	}
+
+
+	.navBar{ 
+	  position:absolute; top:125px; text-align:right; width:100%;
+	  font-family: 'Arimo', serif;
+	  font-size: 34px;
+	  font-style: normal;
+	  font-weight: 700;
+	  text-shadow: 1px 1px 1px #aaa;
+	  text-decoration:none;
+	  text-transform: none;
+	  letter-spacing: 0.064em;
+	  word-spacing: -0.014em;
+
+	
+	}
+	
+
+	
+	#productHolder{margin-top:5px;}
+	
+
+	#limiter{
+		margin-top:225px;
+		width:100%;
+		text-align:right;
+		font-family: 'Arimo', serif;	
+	    text-shadow: 1px 1px 1px #aaa;
+	}
+	
+	#limiter span{
+		cursor:pointer;			
+	}
+	#limiter span:hover{
+		text-decoration:underline;
+	}
+	
+	#limiter a{
+		text-decoration:none;
+		color:#000;
+	}
+	#limiter a:hover{
+		text-decoration:underline;
+	}	
+		
+
+	.productItem{
+
+
+		background: #fff; /* old browsers */
+		
+		
+		behavior: url(css/PIE.htc);
+		
+			
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.48, rgb(255,255,255)),
+			color-stop(0.8, rgb(247,247,247))
+		);
+		background-image: -moz-linear-gradient(
+			center bottom,
+			rgb(255,255,255) 48%,
+			rgb(247,247,247) 80%
+		);
+
+
+
+		
+
+
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7F7F7', endColorstr='#FFFFFF',GradientType=0 ); 
+
+		
+		min-height:265px;
+	
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		width:100%;
+		border:solid 1px #CCC;
+		width:240px;
+		float:left;
+		margin:2px;
+		position:relative;
+		overflow:hidden;
+
+		-moz-box-shadow: 2px 2px 5px #888;
+		-webkit-box-shadow: 2px 2px 5px #888;
+		box-shadow: 2px 2px 5px #888;
+		cursor:pointer;		
+		
+		
+	}
+	
+	.productItem:hover{
+		
+		border:solid 1px #C00;
+		-moz-box-shadow: 2px 2px 5px #C00;
+		-webkit-box-shadow: 1px 1px 5px #C00;
+		box-shadow: 2px 2px 5px #C00;		
+		
+	}
+
+
+	.shortTitleDisplay{
+	  font-family: 'Arimo', serif;
+	  font-size: 14px;
+	  font-style: normal;
+	  font-weight:bold;
+	  text-decoration:none;
+	  text-transform: none;
+	  letter-spacing: 0.064em;
+	  word-spacing: -0.014em;
+	  width:230px;
+	  left:0px;
+	  bottom:0px;
+	  padding:4px;
+	  margin-bottom:3px;
+	  color:#666;
+	  text-align:center;
+	 		
+	}
+	
+	.shortTitleDisplay a{
+		text-decoration:none;
+		color:#666;
+		
+	}
+
+
+	#productDetail{
+		margin-top:250px;
+		width:100%;
+		position:relative;
+		min-height:500px;
+		font-family: 'Arimo', serif;
+		display:none;
+		
+	}
+	
+	#aboutUs{
+		margin-top:250px;
+		width:60%;
+		float:right;
+		min-height:500px;
+	  font-family: 'Arimo', serif;
+	  font-size: 30px;
+	  font-style: normal;
+	  line-height:125%;
+	  font-weight:bold;
+	  text-decoration:none;
+	  text-transform: none;
+	  letter-spacing: 0.064em;
+	  word-spacing: -0.014em;
+	  text-shadow: 1px 1px 2px #aaa;
+	  display:none;
+	  
+		
+		
+	}
+	#aboutUs a{
+		color:#000;
+		
+		
+	}
+	
+
+	
+	#productDetailTitle{
+	  font-size: 26px;
+	  font-style: normal;
+	  font-weight:bold;
+	  position:absolute;
+	  text-shadow: 1px 1px 2px #aaa;
+		
+	}
+	
+	#productDetailMainImage{
+		width:50%;
+		position:absolute;
+		right:0px;
+		top:0px;
+		
+	}
+	
+
+	#productDetailDesc{
+		width:48%;
+		border:soild 1px #039;
+		padding-top:50px;
+ 	   text-shadow: 1px 1px 2px #fff;
+
+		
+		font-size: 16px;
+		font-style: normal;
+		font-weight:bold;
+		line-height:155%;		
+		
+		
+	}
+	#productDetailDesc a{
+		color:#000;
+	}
+	
+	#productDetailInvetory{
+		width:49%;
+		margin-top:55px;
+
+
+	}
+	
+
+	.tablePrint{
+		text-align:center;
+
+	}
+	
+	#productDetailInvetory tr{
+		font-size:14px;
+		font-weight:bold;		
+		
+	}
+	
+	#productDetailInvetory th{
+		font-size:14px;
+		text-align:center;
+		text-decoration:underline;
+		padding-bottom:5px;
+		font-weight:bold;		
+		
+	}
+	
+	.tableEdition{
+		text-align:center;
+		font-family:"Courier New", Courier, monospace;
+		font-weight:bold;		
+
+	}
+	
+	.productDetailMainSmallImageHolder{
+		float:left;
+		margin:5px;
+		cursor:pointer;
+		
+	}
+	.etsyStoreLink{
+		text-align:center;
+		width:40%;
+	  font-family: 'Arimo', serif;
+	  font-size: 30px;
+	  font-style: normal;
+	  font-weight:bold;
+	  margin-top:30px;
+	  
+	  text-shadow: 1px 1px 2px #aaa;		
+	}
+	.etsyStoreLink a{
+		text-decoration:none;
+		color:#000;
+	}
+	.backToListings{
+		
+		text-align:center;
+		width:40%;
+		cursor:pointer;
+
+	  font-family: 'Arimo', serif;
+	  font-size: 30px;
+	  font-style: normal;
+	  font-weight:bold;
+	  margin-top:35px;
+	  text-shadow: 1px 1px 2px #aaa;
+	  	
+	}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+	function showProduct(){
+		
+		var anchor=window.location.hash.substring(1);
+
+ 
+		$('html, body').animate({scrollTop:$('#productDetail').attr('offsetTop')-20}, 'slow');
+
+
+		for (aData in $.productData.results)
+		{
+			
+			if ($.productData.results[aData].id == $.data(document.body, anchor)){
+			
+				$('#productDetailTitle').text($.productData.results[aData].title.replace(/&#39;/ig,"'"));
+				//data.results[aData].title = data.results[aData].title.replace(/&#39;/ig,"'")
+								
+				var desc = $.productData.results[aData].desc;
+				desc = desc.replace(/&lt;/gi,'<');
+				desc = desc.replace(/&gt;/gi,'>');	
+				desc = desc.replace(/&quot;/gi,'"');					
+								
+				$('#productDetailDesc').html(desc);				
+			
+				$('#productDetailInvetory td').each(function(index) {					
+					$(this).remove();
+				});
+				
+				for (aInventory in $.productData.inventory)
+				{				
+				
+					if ($.productData.inventory[aInventory].product == $.data(document.body, anchor)){
+				
+						if ($.productData.inventory[aInventory].edition==1){$.productData.inventory[aInventory].edition='I';}
+						if ($.productData.inventory[aInventory].edition==2){$.productData.inventory[aInventory].edition='II';}
+						if ($.productData.inventory[aInventory].edition==3){$.productData.inventory[aInventory].edition='III';}
+						if ($.productData.inventory[aInventory].edition==4){$.productData.inventory[aInventory].edition='IV';}
+
+				
+						$('#productDetailInvetory')
+							.append(
+								$("<tr>")
+									.append(
+										$("<td>")
+											.text($.productData.inventory[aInventory].size)
+									)
+									.append(
+										$("<td>")
+											.text($.productData.inventory[aInventory].edition)
+											.css('text-align','center')
+											.css('font-family', '"Courier New", Courier, monospace')
+									)									
+									.append(
+										$("<td>")
+											.text($.productData.inventory[aInventory].number + '/' + $.productData.inventory[aInventory].total)
+											.css('text-align','center')											
+									)									
+									.append(
+										$("<td>")
+											.text($.productData.inventory[aInventory].sold)
+									)									
+									
+						);
+						
+						
+						
+					}
+					
+					
+				}
+				
+				
+				
+				$('#productDetailMainImageHolder').empty();
+				$('#productDetailMainImageHolder')
+					.append(
+						$("<img>")
+							.attr('src','/img/shirt'+$.data(document.body, anchor)+'_2.jpg')
+							.css('width','100%')
+							.css('height','auto')														
+							
+				);
+				
+				
+				$('#productDetailMainSmallImageHolder2').empty();
+				$('#productDetailMainSmallImageHolder3').empty();
+				$('#productDetailMainSmallImageHolder4').empty();								
+				$('#productDetailMainSmallImageHolder5').empty();				
+				
+
+
+				$('#productDetailMainSmallImageHolder2')
+					.append(
+						$("<img>")
+							.attr('src','/img/shirt'+$.data(document.body, anchor)+'_2.jpg')
+							.css('height','100')
+							.css('width','auto')	
+							.click(function(){
+												
+								$('#productDetailMainImageHolder').empty();
+								$('#productDetailMainImageHolder')
+									.append(
+										$("<img>")
+											.attr('src','/img/shirt'+$.data(document.body, anchor)+'_2.jpg')
+											.css('width','100%')
+											.css('height','auto')														
+											
+								);								
+								
+								
+								
+								
+							})							
+				);			
+				
+				$('#productDetailMainSmallImageHolder3')
+					.append(
+						$("<img>")
+							.attr('src','/img/shirt'+$.data(document.body, anchor)+'_3.jpg')
+							.css('height','100')
+							.css('width','auto')	
+							.click(function(){
+												
+								$('#productDetailMainImageHolder').empty();
+								$('#productDetailMainImageHolder')
+									.append(
+										$("<img>")
+											.attr('src','/img/shirt'+$.data(document.body, anchor)+'_3.jpg')
+											.css('width','100%')
+											.css('height','auto')														
+											
+								);								
+								
+								
+								
+								
+							})							
+				);							
+				
+				$('#productDetailMainSmallImageHolder4')
+					.append(
+						$("<img>")
+							.error(function(){$(this).css("display","none");})	
+							.attr('src','/img/shirt'+$.data(document.body, anchor)+'_4.jpg')
+							.css('height','100')
+							.css('width','auto')	
+							.click(function(){
+												
+								$('#productDetailMainImageHolder').empty();
+								$('#productDetailMainImageHolder')
+									.append(
+										$("<img>")
+											.attr('src','/img/shirt'+$.data(document.body, anchor)+'_4.jpg')
+											.css('width','100%')
+											.css('height','auto')														
+											
+								);								
+								
+								
+								
+								
+							})							
+				);			
+			
+				$('#productDetailMainSmallImageHolder5')
+					.append(
+						$("<img>")
+							.error(function(){$(this).css("display","none");})	
+							.attr('src','/img/shirt'+$.data(document.body, anchor)+'_5.jpg')
+							.css('height','100')
+							.css('width','auto')	
+							.click(function(){
+												
+								$('#productDetailMainImageHolder').empty();
+								$('#productDetailMainImageHolder')
+									.append(
+										$("<img>")											
+											.attr('src','/img/shirt'+$.data(document.body, anchor)+'_5.jpg')
+											.css('width','100%')
+											.css('height','auto')
+																								
+											
+								);								
+								
+								
+								
+								
+							})
+				);			
+				
+			
+				
+				
+			}			
+		}
+
+
+
+
+
+		
+		
+		$('#limiter').fadeOut('fast', function() {});
+		$('#productHolder').fadeOut('fast', function() {
+
+			$('#productDetail').fadeIn('fast', function() {
+	
+			 });					
+
+
+
+		 });					
+		
+
+		
+		
+		
+		
+		
+	}
+
+
+
+	function buildTree(data,sizeLimit){
+	
+		
+		//console.log(data.results);
+		if (typeof(sizeLimit) != 'undefined'){
+		
+			var useIds = [];
+			
+			for (aInventory in data.inventory)
+			{				
+				if (data.inventory[aInventory].size==sizeLimit && data.inventory[aInventory].sold=='Available'){
+					if ($.inArray(data.inventory[aInventory].product,useIds)==-1){					
+						useIds.push(data.inventory[aInventory].product);
+
+					}
+				}
+			}
+			
+		}else{
+			
+			var useIds = [];
+			
+			for (aData in data.results)
+			{				
+				if ($.inArray(data.results[aData].id,useIds)==-1){					
+					useIds.push(data.results[aData].id);
+
+				}
+			}			
+			
+			
+		}
+	
+		
+		$('#productHolder').empty();
+		
+		for (aData in data.results)
+		{	
+			if ($.inArray(data.results[aData].id ,useIds)!=-1){		
+			
+			
+							
+				if (data.results[aData].enable==0){continue;}
+										
+				shirtName = '!/' + data.results[aData].short_title;
+				shirtName =  shirtName.replace(/\s/ig,'_');
+				shirtName =  shirtName.replace(/#/ig,'');
+				shirtName =  shirtName.replace(/'/ig,'');						
+				shirtName =  shirtName.replace(/"/ig,'');
+													
+	
+				$.data(document.body, shirtName, data.results[aData].id);
+				
+	
+				$.History.bind(shirtName,function(state){
+					showProduct(shirtName);
+				});		
+							
+				data.results[aData].short_title = data.results[aData].short_title.replace(/&#39;/ig,"'")
+	
+				
+				$('#productHolder').append(
+					$('<div>')
+						.addClass('productItem')
+						.data('id',data.results[aData].id)
+						.attr('title','Click to see details')
+						.attr('id','productItem_'+data.results[aData].id)
+						.data('shirt',shirtName)
+						.click(function() {
+							$.History.go($(this).data('shirt'));
+						})
+						.append(
+							$('<img>')
+								.error(function() { 
+									$(this).attr('title','Error Loading Img')								
+									$(this).attr('alt','Error Loading Img')
+									$(this).attr('src','/img/shirtnotfound.png')	
+								})
+								.attr('src','/img/shirt'+data.results[aData].id+'_1.png')
+				
+						)
+						.append(
+							$('<div>')
+								.addClass('shortTitleDisplay')
+								.append(
+									$('<a>')
+										.attr('href','http://aoristic.us/#'+shirtName)
+										.text(data.results[aData].short_title)										
+								
+								
+								)
+							
+				
+						)	
+								
+				
+				);
+				
+			}
+		}
+		
+
+	}
+
+
+
+
+	$(document).ready(function() {
+			
+
+
+		$('#productDetail').fadeOut('fast', function() {});		
+		$('#aboutUs').fadeOut('fast', function() {});		
+		 
+		 	
+
+
+		$.History.bind('',function(state){
+			$('#aboutUs').fadeOut('fast', function() {	});		
+			$('#productDetail').fadeOut('fast', function() {
+				$('#productHolder').fadeIn('fast', function() {	});
+				$('#limiter').fadeIn('fast', function() {});
+			});
+
+		});		
+		
+		$.History.bind('!/aboutUs',function(state){
+			$('#limiter').fadeOut('fast', function() {});			
+			$('#productHolder').fadeOut('fast', function() {
+				$('#aboutUs').fadeIn('fast', function() {	});
+
+			});
+
+		});					
+			
+		//$productData=	
+
+		$.productData = jQuery.parseJSON('{"results":[{"id":"42","title":"Fractal Death","desc":"Fractal&#039;s can&#039;t die, just repeat. &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;","order":"0","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Fractal Death","enable":"1"},{"id":"43","title":"Emma Book Tee","desc":"&quot;Tell me, then, have I no chance of ever succeeding?&quot;&lt;br&gt;&lt;br&gt;yes..no..yes..pew pew pew&lt;br&gt;&lt;br&gt;Title page mash up&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;","order":"1","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Emma Book Tee","enable":"1"},{"id":"39","title":"Importance of Being Earnest","desc":"A serious tshirt for trivial people.Title page mashsup","order":"2","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Oscar Wilde","enable":"1"},{"id":"31","title":"French Blue","desc":"The Hope of the future.&lt;br&gt;&lt;br&gt;&lt;br\/&gt;&lt;br\/&gt;","order":"3","made":"","type":"Shirt","run":"1","printed":"0","short_title":"French Blue","enable":"1"},{"id":"32","title":"Le Corbeau","desc":"Poe &amp; Manet tag team.&lt;br&gt;&lt;br&gt;&lt;br\/&gt;&lt;br\/&gt;","order":"4","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Le Corbeau","enable":"1"},{"id":"35","title":"Flower Flow","desc":"Reaching far, trying to grow.&lt;br&gt;&lt;br\/&gt;&lt;br\/&gt;","order":"5","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Flower Flow Dress","enable":"1"},{"id":"45","title":"Cleveland","desc":"ancient rome -&gt; 1920&#039;s cleveland -&gt; your shirt&lt;br&gt;&lt;br&gt;&lt;br&gt;All we care about is money and the city we&#039;re from.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;","order":"6","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Cleveland","enable":"1"},{"id":"34","title":"Bike Dandy Tee","desc":"Bicycling with elegance requires\u2026 nay, demands gallant attire. Fl\u00e2neur proudly about town with our Bike Dandy Tee and enjoy your nonchalant rise in societal status.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;","order":"7","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Bike Dandy Tee","enable":"1"},{"id":"14","title":"Bacon Cipher (vs) Euclid Isosceles","desc":"Truly, a Classic Renaissance mash up.&lt;br&gt;&lt;br&gt;&lt;br\/&gt;","order":"8","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Bacon  (vs) Euclid ","enable":"1"},{"id":"29","title":"Unicode Rice Asterisk","desc":"Japanese asterisk and rice.&lt;br&gt;&lt;br&gt;\u203b \u203b \u203b \u203b \u203b \u203b \u203b \u203b \u203b \u203b \u203b \u203b \u203b &lt;br&gt;&lt;br&gt;U+203B&lt;br&gt;&lt;br&gt;&lt;br\/&gt;","order":"9","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Unicode Rice Asterisk","enable":"1"},{"id":"28","title":"Irony punctuation","desc":"Somewhere between an Asterism and an Interrobang\u061f&lt;br&gt;&lt;br\/&gt;&lt;br\/&gt;","order":"10","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Irony punctuation","enable":"1"},{"id":"25","title":"Durer Polyhedra","desc":"Geometric Melancholia&lt;br\/&gt;&lt;br\/&gt;&lt;br\/&gt;","order":"11","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Durer Polyhedra","enable":"1"},{"id":"12","title":"Third Estate","desc":"In general, it\u2019s good to know where you stand in the grand scheme of things. When 1% owns 25% who are the third estate?&lt;br&gt;&lt;br&gt;&lt;br\/&gt;","order":"12","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Third Estate","enable":"1"},{"id":"18","title":"Still Life","desc":"It&amp;#039;s hard to organize a still life.&lt;br&gt;&lt;br&gt;&lt;br\/&gt;","order":"13","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Still Life","enable":"1"},{"id":"11","title":"L&#39;ART RELIGIEUX","desc":"Putting French icons in their place for 103 years\u2026 and reliquaries\u2026and manuscripts\u2026&lt;br&gt;&lt;br&gt;&lt;a href=&quot;http:\/\/aoristic.us\/blog\/?p=12&quot;&gt;Check out our blog post about this shirt&lt;\/a&gt;&lt;br&gt;&lt;br&gt;&lt;br\/&gt;","order":"14","made":"","type":"Shirt","run":"1","printed":"0","short_title":"LART RELIGIEUX","enable":"1"},{"id":"9","title":"Fleurs du Mal","desc":"Ahhh, the oppression of living. It\u2019s deadly work to be this elegant.&lt;br&gt;&lt;br&gt;&lt;br\/&gt;&lt;br\/&gt;","order":"15","made":"","type":"Shirt","run":"2","printed":"0","short_title":"Fleurs du Mal","enable":"1"},{"id":"7","title":"Brooklyn","desc":"County of Kings, Constantine looms large behinds the scaffolding.&lt;br&gt;&lt;br&gt;&lt;br\/&gt;&lt;br\/&gt;","order":"16","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Brooklyn","enable":"1"},{"id":"10","title":"Fry","desc":"Tap roots run deep, especially when they\u2019re a triple threat.  With Fry you get the whole package.&lt;br&gt;&lt;br&gt;&lt;a href=&quot;http:\/\/aoristic.us\/blog\/?p=12&quot;&gt;Check out our blog post about this shirt&lt;\/a&gt;&lt;br&gt;&lt;br&gt;&lt;br\/&gt;&lt;br\/&gt;","order":"17","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Fry","enable":"1"},{"id":"3","title":"Buckey Ball \u00f7 2","desc":"Buckminster Fuller: N 41\u00b0 27.619 W 081\u00b0 17.960&lt;br&gt;&lt;br&gt;&lt;br\/&gt;&lt;br\/&gt;","order":"18","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Buckey Ball \u00f7 2","enable":"1"},{"id":"17","title":"Best Copy Possible","desc":"Sometimes all you can do is try your best.&lt;br&gt;&lt;br&gt;&lt;br\/&gt;&lt;br\/&gt;","order":"19","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Best Copy Possible","enable":"1"},{"id":"15","title":"Je Suis 3rd Estate","desc":"What estate are you?&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br\/&gt;","order":"20","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Je Suis 3rd Estate","enable":"1"},{"id":"6","title":"Balzac","desc":"Balzac, so lonely in that MoMA courtyard. Everything you heard is true. &lt;br&gt;&lt;br&gt;This shirt is definitely a posthumous printing.&lt;br&gt;&lt;br&gt;&lt;a href=&quot;http:\/\/aoristic.us\/blog\/?p=4&quot;&gt;Check out our blog post about this shirt&lt;\/a&gt;&lt;br&gt;&lt;br&gt;&lt;br\/&gt;","order":"21","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Balzac","enable":"1"},{"id":"2","title":"Extinct Political Parties #1","desc":"Millard Fillmore really didn\u2019t did he?&lt;br&gt;&lt;br&gt;For the confused: We don\u2019t support the Know Nothing\u2019s 160 year old ideology, we just like their honesty.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br\/&gt;","order":"22","made":"","type":"Shirt","run":"1","printed":"0","short_title":"EPP No. 1 Know Nothings","enable":"1"},{"id":"19","title":"Nietzsche - Book Tee","desc":"&quot;When Zarathustra was thirty years old, he left home andthe lake of his home and went into the mountains. There he enjoyed his spirit and solitude and for ten years did not weary of it.&quot; -- Thus Spoke Zarathustra, by a certain someone. &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br\/&gt;","order":"23","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Nietzsche","enable":"1"},{"id":"41","title":"Night Sky","desc":"&quot;Is that betelgeuse or an airplane?&quot;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;","order":"24","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Night Sky","enable":"1"},{"id":"40","title":"Geodesique Scarf","desc":"The Geodesique of space can take a very different shape.","order":"25","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Geodesique Scarf","enable":"1"},{"id":"33","title":"Bike Dandy","desc":"Bicycling with elegance requires\u2026 nay, demands gallant attire. Were you going to place your recently procured bicycle accouterments into any old bag? Fl\u00e2neur proudly about town with our Bike Dandy tote bag and enjoy your nonchalant rise in societal status.&lt;br&gt;&lt;br&gt;----&lt;br&gt;This design is printed(double printed on each side) on a handy 14.5 x 14 inch natural colored tote bag.&lt;br&gt;Our designs are hand-printed and subject to individual variations resulting from the process, contact us with any concerns.&lt;br&gt;","order":"26","made":"","type":"Tote","run":"1","printed":"0","short_title":"Bike Dandy","enable":"1"},{"id":"27","title":"Tally~Ho","desc":"Go West, Young Man.... but bring a lamp.&lt;br&gt;Adapted from a 19th century bike lantern advert.&lt;br&gt;----&lt;br&gt;This design is printed(double printed on each side) on a handy 14.5 x 14 inch natural colored tote bag.&lt;br&gt;Our designs are hand-printed and subject to individual variations resulting from the process, contact us with any concerns.&lt;br&gt;","order":"27","made":"","type":"Tote","run":"1","printed":"0","short_title":"Tally~ho","enable":"1"},{"id":"36","title":"Hi 2 u :)","desc":"Just hanging out, whats you doing? :)&lt;br&gt;&lt;br&gt;&lt;br&gt;","order":"28","made":"","type":"Tote","run":"1","printed":"0","short_title":"Hi 2 u :)","enable":"1"},{"id":"38","title":"Pigeon Love","desc":"Missed Connections:&lt;br&gt;&lt;br&gt;You were eating a bag of Doritos at the 14th St. A subway. I was across the platform self-consciously straightening my mustache trying to conceal my lazy eye. Was it just me or did we totally have a connection?! Lets be friends!!&lt;br&gt;&lt;br&gt;- mustache guy&lt;br&gt;&lt;br&gt;----&lt;br&gt;&lt;br&gt;","order":"29","made":"","type":"Tote","run":"1","printed":"0","short_title":"Pigeon Love","enable":"1"},{"id":"44","title":"Archibald the Elephant","desc":"Archibald is an elephant&#039;s elephant.&lt;br&gt;&lt;br&gt;&lt;br&gt;After starting a very successful nightclub Archibald is looking forward to the quite country life.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;","order":"30","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Archibald","enable":"1"},{"id":"37","title":"Noon Moon","desc":"Only twelve hours. Both here and there.&lt;br&gt;&lt;br&gt;&lt;br&gt;","order":"31","made":"","type":"Tote","run":"1","printed":"0","short_title":"Noon Moon","enable":"1"},{"id":"26","title":"Postman Tote","desc":"Keeping it real with Number-kun, the Japanese post symbol. &lt;br&gt;\u3020\u3020\u3020\u3020\u3020\u3020\u3020\u3020 &lt;br&gt;&lt;br&gt;&lt;br&gt;","order":"32","made":"","type":"Tote","run":"1","printed":"0","short_title":"Postman","enable":"1"},{"id":"30","title":"Trifflin","desc":"Looks sometimes speak louder than words.&lt;br&gt;&lt;br&gt;This is a trifflin&amp;#039; tote bag....kind of. &lt;br&gt;&lt;br&gt;&lt;br\/&gt;","order":"33","made":"","type":"Shirt","run":"1","printed":"0","short_title":"Trifflin","enable":"1"},{"id":"20","title":"Gucci Pigeon","desc":"Hello. This is Guccio. I&#039;m a Pigeon. I wear belts.&lt;br&gt;&lt;br&gt;&lt;br&gt;That is whats up.&lt;br&gt;&lt;br&gt;&lt;br&gt;","order":"34","made":"","type":"Tote","run":"1","printed":"0","short_title":"Gucci Pigeon","enable":"1"},{"id":"8","title":"St. Denise","desc":"Cephalophores are the new black in 2011. &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;","order":"35","made":"","type":"Tote","run":"1","printed":"0","short_title":"St. Denise","enable":"1"},{"id":"21","title":"Knuckle Duster","desc":"Dust those knuckles son. &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;","order":"36","made":"","type":"Tote","run":"1","printed":"0","short_title":"Knuckle Duster","enable":"1"},{"id":"22","title":"Zut Alors","desc":"OMFG! I don&amp;#039;t care if they don&amp;#039;t say that in France anymore! &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;","order":"37","made":"","type":"Tote","run":"1","printed":"0","short_title":"Zut Alors","enable":"1"},{"id":"13","title":"Volition","desc":"Decisions, decisions, decisions. Why must it be so strenuous to make cognitive choices?&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;","order":"38","made":"","type":"Tote","run":"1","printed":"0","short_title":"Volition","enable":"1"}],"inventory":[{"id":"5","product":"2","size":"Extra Small","sold":"Available","number":"1","total":"3","edition":"1"},{"id":"6","product":"2","size":"Small","sold":"Apr 2 11","number":"2","total":"3","edition":"1"},{"id":"7","product":"2","size":"Medium","sold":"Feb 20 11","number":"3","total":"3","edition":"1"},{"id":"1","product":"3","size":"Extra Small","sold":"Available","number":"1","total":"3","edition":"1"},{"id":"2","product":"3","size":"Small","sold":"Jul 31 11","number":"2","total":"3","edition":"1"},{"id":"4","product":"3","size":"Medium","sold":"Jan 29 11","number":"3","total":"3","edition":"1"},{"id":"40","product":"6","size":"Extra Small","sold":"Available","number":"1","total":"3","edition":"1"},{"id":"41","product":"6","size":"Small","sold":"Available","number":"2","total":"3","edition":"1"},{"id":"42","product":"6","size":"Medium","sold":"Available","number":"3","total":"3","edition":"1"},{"id":"14","product":"7","size":"Extra Small","sold":"Available","number":"1","total":"3","edition":"1"},{"id":"15","product":"7","size":"Small","sold":"Available","number":"2","total":"3","edition":"1"},{"id":"16","product":"7","size":"Medium","sold":"Available","number":"3","total":"3","edition":"1"},{"id":"36","product":"8","size":"N\/A","sold":"Feb 17 11","number":"1","total":"4","edition":"1"},{"id":"37","product":"8","size":"N\/A","sold":"Feb 23 11","number":"2","total":"4","edition":"1"},{"id":"38","product":"8","size":"N\/A","sold":"Available","number":"3","total":"4","edition":"1"},{"id":"39","product":"8","size":"N\/A","sold":"Available","number":"4","total":"4","edition":"1"},{"id":"20","product":"9","size":"Extra Small","sold":"Mar 24 11","number":"1","total":"3","edition":"1"},{"id":"21","product":"9","size":"Small","sold":"Apr 2 11","number":"2","total":"3","edition":"1"},{"id":"22","product":"9","size":"Medium","sold":"Mar 12 11","number":"3","total":"3","edition":"1"},{"id":"88","product":"9","size":"Extra Small","sold":"Sold","number":"1","total":"4","edition":"2"},{"id":"89","product":"9","size":"Small","sold":"Available","number":"2","total":"4","edition":"2"},{"id":"90","product":"9","size":"Medium","sold":"Available","number":"3","total":"4","edition":"2"},{"id":"91","product":"9","size":"Large","sold":"Available","number":"4","total":"4","edition":"2"},{"id":"23","product":"10","size":"Extra Small","sold":"Available","number":"1","total":"3","edition":"1"},{"id":"24","product":"10","size":"Small","sold":"Available","number":"2","total":"3","edition":"1"},{"id":"25","product":"10","size":"Medium","sold":"Available","number":"3","total":"3","edition":"1"},{"id":"26","product":"11","size":"Extra Small","sold":"Available","number":"1","total":"3","edition":"1"},{"id":"27","product":"11","size":"Small","sold":"Jul 3 11","number":"2","total":"3","edition":"1"},{"id":"28","product":"11","size":"Medium","sold":"Apr 9 11","number":"3","total":"3","edition":"1"},{"id":"29","product":"12","size":"Extra Small","sold":"Available","number":"1","total":"3","edition":"1"},{"id":"30","product":"12","size":"Small","sold":"Jan 30 11","number":"2","total":"3","edition":"1"},{"id":"45","product":"12","size":"Medium","sold":"Feb 7 11","number":"3","total":"3","edition":"1"},{"id":"32","product":"13","size":"N\/A","sold":"Feb 20 11","number":"1","total":"4","edition":"1"},{"id":"33","product":"13","size":"N\/A","sold":"Feb 23 11","number":"2","total":"4","edition":"1"},{"id":"34","product":"13","size":"N\/A","sold":"Feb 23 11","number":"3","total":"4","edition":"1"},{"id":"35","product":"13","size":"N\/A","sold":"Apr 9 11","number":"4","total":"4","edition":"1"},{"id":"46","product":"14","size":"Extra Small","sold":"Available","number":"1","total":"4","edition":"1"},{"id":"47","product":"14","size":"Small","sold":"Available","number":"2","total":"4","edition":"1"},{"id":"48","product":"14","size":"Medium","sold":"Apr 9 11","number":"3","total":"4","edition":"1"},{"id":"49","product":"14","size":"Large","sold":"Jun 20 11","number":"4","total":"4","edition":"1"},{"id":"50","product":"15","size":"Extra Small","sold":"Available","number":"1","total":"4","edition":"1"},{"id":"51","product":"15","size":"Small","sold":"Aug 22 11","number":"2","total":"4","edition":"1"},{"id":"52","product":"15","size":"Medium","sold":"Jul 31 11","number":"3","total":"4","edition":"1"},{"id":"53","product":"15","size":"Large","sold":"Apr 9 11","number":"4","total":"4","edition":"1"},{"id":"54","product":"17","size":"Extra Small","sold":"Apr 2 11","number":"1","total":"4","edition":"1"},{"id":"55","product":"17","size":"Small","sold":"Available","number":"2","total":"4","edition":"1"},{"id":"56","product":"17","size":"Medium","sold":"Available","number":"3","total":"4","edition":"1"},{"id":"57","product":"17","size":"Large","sold":"Available","number":"4","total":"4","edition":"1"},{"id":"58","product":"18","size":"Extra Small","sold":"Available","number":"1","total":"4","edition":"1"},{"id":"60","product":"18","size":"Small","sold":"Available","number":"2","total":"4","edition":"1"},{"id":"61","product":"18","size":"Medium","sold":"Available","number":"3","total":"4","edition":"1"},{"id":"62","product":"18","size":"Large","sold":"Available","number":"4","total":"4","edition":"1"},{"id":"71","product":"19","size":"Extra Small","sold":"Available","number":"1","total":"4","edition":"1"},{"id":"72","product":"19","size":"Small","sold":"Jun 20 11","number":"2","total":"4","edition":"1"},{"id":"73","product":"19","size":"Medium","sold":"Apr 6 11","number":"3","total":"4","edition":"1"},{"id":"74","product":"19","size":"Large","sold":"Apr 6 11","number":"3","total":"4","edition":"1"},{"id":"63","product":"20","size":"N\/A","sold":"Available","number":"1","total":"4","edition":"1"},{"id":"64","product":"20","size":"N\/A","sold":"Available","number":"2","total":"4","edition":"1"},{"id":"65","product":"20","size":"N\/A","sold":"Available","number":"3","total":"4","edition":"1"},{"id":"66","product":"20","size":"N\/A","sold":"Available","number":"4","total":"4","edition":"1"},{"id":"67","product":"21","size":"N\/A","sold":"Available","number":"1","total":"4","edition":"1"},{"id":"68","product":"21","size":"N\/A","sold":"Available","number":"2","total":"4","edition":"1"},{"id":"69","product":"21","size":"N\/A","sold":"Available","number":"3","total":"4","edition":"1"},{"id":"70","product":"21","size":"N\/A","sold":"Available","number":"4","total":"4","edition":"1"},{"id":"79","product":"25","size":"Extra Small","sold":"Available","number":"1","total":"4","edition":"1"},{"id":"81","product":"25","size":"Small","sold":"Available","number":"2","total":"4","edition":"1"},{"id":"82","product":"25","size":"Medium","sold":"Available","number":"3","total":"4","edition":"1"},{"id":"83","product":"25","size":"Large","sold":"Available","number":"4","total":"4","edition":"1"},{"id":"84","product":"28","size":"Extra Small","sold":"Available","number":"1","total":"4","edition":"1"},{"id":"85","product":"28","size":"Small","sold":"Available","number":"2","total":"4","edition":"1"},{"id":"86","product":"28","size":"Medium","sold":"Available","number":"3","total":"4","edition":"1"},{"id":"87","product":"28","size":"Large","sold":"Available","number":"4","total":"4","edition":"1"},{"id":"92","product":"29","size":"Extra Small","sold":"Available","number":"1","total":"3","edition":"1"},{"id":"94","product":"29","size":"Small","sold":"Available","number":"2","total":"3","edition":"1"},{"id":"95","product":"29","size":"Medium","sold":"Available","number":"3","total":"3","edition":"1"},{"id":"96","product":"31","size":"Extra Small","sold":"Available","number":"1","total":"4","edition":"1"},{"id":"97","product":"31","size":"Small","sold":"Available","number":"2","total":"4","edition":"1"},{"id":"98","product":"31","size":"Medium","sold":"Available","number":"3","total":"4","edition":"1"},{"id":"99","product":"31","size":"Large","sold":"Available","number":"4","total":"4","edition":"1"},{"id":"100","product":"32","size":"Extra Small","sold":"Available","number":"1","total":"4","edition":"1"},{"id":"101","product":"32","size":"Small","sold":"Available","number":"2","total":"4","edition":"1"},{"id":"102","product":"32","size":"Medium","sold":"Aug 22 11","number":"3","total":"4","edition":"1"},{"id":"103","product":"32","size":"Large","sold":"Available","number":"4","total":"4","edition":"1"}]}');
+		
+
+		
+		/*$.History.bind('/addNewProduct',function(state){
+			// Update Menu
+			//updateMenu(state);
+			// Show apricots tab, hide the other tabs
+			//$tabs.hide();
+			//$apricots.stop(true,true).fadeIn(200);
+			alert('hiiiii');
+			$.History.go('/');
+		});		
+		*/
+
+		$('.logo').click(function(){
+			$.History.go('');
+		});
+		
+//		$('#aboutUsLink').click(function(){
+	//		$.History.go('!/aboutUs');
+		//});
+				
+		$('.backToListings').each(function(index) {					
+				
+			$(this).click(function(){
+				$.History.go('');
+			});			
+
+	
+		});
+		
+		
+		
+
+
+		
+		$('#limitXS').click(function(){
+			$('#limitXS').css('color','#000');$('#limitM').css('color','#000');$('#limitS').css('color','#000'); $('#limitL').css('color','#000');			
+			buildTree($.productData, 'Extra Small');
+			$(this).css('color','#C00');
+			
+		});
+		$('#limitL').click(function(){
+			$('#limitXS').css('color','#000');$('#limitM').css('color','#000');$('#limitS').css('color','#000'); $('#limitL').css('color','#000');			
+			buildTree($.productData, 'Large');
+			$(this).css('color','#C00');
+			
+		});
+		
+		
+		
+		$('#limitS').click(function(){
+			$('#limitXS').css('color','#000');$('#limitM').css('color','#000');$('#limitS').css('color','#000'); $('#limitL').css('color','#000');									
+			buildTree($.productData, 'Small');
+			$(this).css('color','#C00');
+		});
+		$('#limitM').click(function(){
+			$('#limitXS').css('color','#000');$('#limitM').css('color','#000');$('#limitS').css('color','#000'); $('#limitL').css('color','#000');						
+			buildTree($.productData, 'Medium');
+			$(this).css('color','#C00');
+		});				
+		$('#limitAll').click(function(){
+			$('#limitXS').css('color','#000');$('#limitM').css('color','#000');$('#limitS').css('color','#000'); $('#limitL').css('color','#000');					
+			var someData=$.productData;						
+			buildTree(someData);
+		});						
+
+
+		buildTree($.productData);
+		
+		
+	
+		
+		
+ 
+		
+				  		
+	});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+<body>
+
+ 
+
+<div id="content">
+
+	<div class="logo">AORISTIC</div>
+    
+    <div class="navBar">hand-printed attire</div>
+
+
+	<div style="position:absolute; top:195px; left:5px;">
+
+	    
+    
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        
+        <div class="fb-like-box" data-href="http://www.facebook.com/pages/Aoristic/255634651133719" data-width="292" data-show-faces="false" data-stream="false" data-header="true"></div>
+    
+    
+    </div>
+    
+    
+    <div id="aboutUs">
+    	We create very limited runs of hand-printed designs inspired by history, art, and culture. Our designs present ideas formed in the past whose outcome is indeterminate.  We believe in originality though repetition. Aoristic is comprised of Matt & Amelia based in Brooklyn, New York. <br />
+		<br />
+        <a href="mailto:us@aoristic.us">
+		Email us</a><br />
+        <div class="backToListings" style="width:100%;">        
+        	&lt; Back to Listings        
+        </div>		
+    </div>
+
+	<div style="clear:both"></div>
+	<div id="productDetail">
+    
+    	<div id="productDetailTitle">This is the title!</div>
+        
+        <div id="productDetailMainImage">
+        
+        	<div id="productDetailMainImageHolder">
+        	<img src="http://aoristic.us/img/shirt1_4.jpg" style="width:100%; height:auto;" />
+        	</div>
+            
+        
+        
+            <div class="productDetailMainSmallImageHolder" id="productDetailMainSmallImageHolder2">
+                
+                            <img src="http://aoristic.us/img/shirt1_2.jpg" style="width:auto; height:100px;" />
+
+            
+            </div>
+            <div class="productDetailMainSmallImageHolder" id="productDetailMainSmallImageHolder3">
+            
+                <img src="http://aoristic.us/img/shirt1_3.jpg" style="width:auto; height:100px;" />
+            
+            </div>
+            <div class="productDetailMainSmallImageHolder" id="productDetailMainSmallImageHolder4">
+                <img src="http://aoristic.us/img/shirt1_4.jpg" style="width:auto; height:100px;" />
+            </div>
+            <div class="productDetailMainSmallImageHolder" id="productDetailMainSmallImageHolder5">
+                <img src="http://aoristic.us/img/shirt1_5.jpg" style="width:auto; height:100px;" />            
+            </div>
+            
+
+        
+        
+        </div>
+        <div id="productDetailMainImages"></div>        
+        
+        
+        <div id="productDetailDesc">wampwampwamp</div>
+
+	
+
+
+
+        <table id="productDetailInvetory" style="display:none;">
+        
+        	<thead>
+            	<tr>
+					<th style="text-align:left;">Size</th><th title="This shows the edition or batch of this item.">Edition</th><th title="This shows print number of the item">Print</th><th></th>            
+                </tr>
+            </thead>
+            
+            <tr>
+            	<td>Extra Small</td><td class="tableEdition">I</td><td class="tablePrint">1/3</td><td>Available</td>
+            </tr>
+			<tr>
+            	<td>Small</td><td class="tableEdition">I</td><td class="tablePrint">2/3</td><td>Available</td>            
+            </tr>
+            <tr>
+            	<td>Medium</td><td class="tableEdition">I</td><td class="tablePrint">3/3</td><td>Available</td>                                            
+            </tr>
+        
+        
+        
+        
+        </table>
+        
+        <div class="etsyStoreLink"><a href="http://aoristic.etsy.com">Visit Etsy Store &gt;</a></div>    
+    	<div class="backToListings">
+        
+        	&lt; Back to Listings
+        
+        </div>
+    
+    
+    
+    
+    
+    
+    </div>
+    
+	<div id="limiter">
+    
+    <span style="display:none">Show Sizes: <span id="limitXS" title="Only show products that have extra small available.">XS</span>, <span id="limitS" title="Only show products that have small available.">S</span>, <span id="limitM" title="Only show products that have medium available.">M</span>, <span id="limitL" title="Only show products that have large available.">L</span>, <span id="limitAll" title="Show all products">All</span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="index.html#!/aboutUs" id="aboutUsLink">About Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="blog/index.html">Read Blog</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://Aoristic.etsy.com">Etsy Store</a></div>    
+	
+    
+    <div id="productHolder">
+    
+    
+    </div>
+	<div style="clear:both">
+
+
+
+
+</div>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10371295-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
