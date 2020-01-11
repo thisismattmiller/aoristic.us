@@ -336,6 +336,99 @@
 	}
 
 
+
+
+
+.rainbow{
+
+ -webkit-animation:rainbow 3s linear infinite;
+ cursor: default !important;
+ text-decoration: none !important;
+}
+
+@-webkit-keyframes rainbow {
+  from {
+    text-shadow:
+      0.04em 0.04em #ff0000,
+      0.08em 0.08em #ff7f00,
+      0.12em 0.12em #ffff00,
+      0.16em 0.16em #00ff00,
+      0.20em 0.20em #0000ff,
+      0.24em 0.24em #4b0082,
+      0.28em 0.28em #8f00ff;
+  }
+  15% {
+    text-shadow:
+      0.04em 0.04em #8f00ff,
+      0.08em 0.08em #ff0000,
+      0.12em 0.12em #ff7f00,
+      0.16em 0.16em #ffff00,
+      0.20em 0.20em #00ff00,
+      0.24em 0.24em #0000ff,
+      0.28em 0.28em #4b0082;
+  }
+  30% {
+    text-shadow:
+      0.04em 0.04em #4b0082,
+      0.08em 0.08em #8f00ff,
+      0.12em 0.12em #ff0000,
+      0.16em 0.16em #ff7f00,
+      0.20em 0.20em #ffff00,
+      0.24em 0.24em #00ff00,
+      0.28em 0.28em #0000ff;
+  }
+  45% {
+    text-shadow:
+      0.04em 0.04em #0000ff,
+      0.08em 0.08em #4b0082,
+      0.12em 0.12em #8f00ff,
+      0.16em 0.16em #ff0000,
+      0.20em 0.20em #ff7f00,
+      0.24em 0.24em #ffff00,
+      0.28em 0.28em #00ff00;
+  }
+  60% {
+    text-shadow:
+      0.04em 0.04em #00ff00,
+      0.08em 0.08em #0000ff,
+      0.12em 0.12em #4b0082,
+      0.16em 0.16em #8f00ff,
+      0.20em 0.20em #ff0000,
+      0.24em 0.24em #ff7f00,
+      0.28em 0.28em #ffff00;
+  }
+  75% {
+    text-shadow:
+      0.04em 0.04em #ffff00,
+      0.08em 0.08em #00ff00,
+      0.12em 0.12em #0000ff,
+      0.16em 0.16em #4b0082,
+      0.20em 0.20em #8f00ff,
+      0.24em 0.24em #ff0000,
+      0.28em 0.28em #ff7f00;
+  }
+  90% {
+    text-shadow:
+      0.04em 0.04em #ff7f00,
+      0.08em 0.08em #ffff00,
+      0.12em 0.12em #00ff00,
+      0.16em 0.16em #0000ff,
+      0.20em 0.20em #4b0082,
+      0.24em 0.24em #8f00ff,
+      0.28em 0.28em #ff0000;
+  }
+  to {
+    text-shadow:
+      0.04em 0.04em #ff0000,
+      0.08em 0.08em #ff7f00,
+      0.12em 0.12em #ffff00,
+      0.16em 0.16em #00ff00,
+      0.20em 0.20em #0000ff,
+      0.24em 0.24em #4b0082,
+      0.28em 0.28em #8f00ff;
+  }
+}
+
 </style>
 
 
@@ -827,18 +920,7 @@
 	<div style="position:absolute; top:195px; left:5px;">
 
 	    
-    
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) {return;}
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-        
-        <div class="fb-like-box" data-href="http://www.facebook.com/pages/Aoristic/255634651133719" data-width="292" data-show-faces="false" data-stream="false" data-header="true"></div>
-    
+   
     
     </div>
     
@@ -936,6 +1018,7 @@
     
 	<div id="limiter">
     
+    <div style="text-align: center;font-size: 33px;margin-bottom: 82px;"><h1>This form of Aoristic is dead. But it still <span class="rainbow">repeats</span> across the internet.</h1><h1>You can purchase some of the designs below <a style="text-decoration: underline;" href="http://tee.pub/lic/kuV1LXLeHQw">at this store</a>.</h1></div>
     <span style="display:none">Show Sizes: <span id="limitXS" title="Only show products that have extra small available.">XS</span>, <span id="limitS" title="Only show products that have small available.">S</span>, <span id="limitM" title="Only show products that have medium available.">M</span>, <span id="limitL" title="Only show products that have large available.">L</span>, <span id="limitAll" title="Show all products">All</span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="index.html#!/aboutUs" id="aboutUsLink">About Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="blog/index.html">Read Blog</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://Aoristic.etsy.com">Etsy Store</a></div>    
 	
     
@@ -964,5 +1047,8 @@
   })();
 
 </script>
+
+
 </body>
+
 </html>
